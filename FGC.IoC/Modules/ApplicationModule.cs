@@ -1,0 +1,22 @@
+// "// Copyright (c) FIAP Cloud Games. All rights reserved."
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using FCG.Application.Interfaces;
+using FCG.Application.Services;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace FGC.IoC.Modules;
+public static class ApplicationModule
+{
+    public static IServiceCollection AddApplicationModule(this IServiceCollection services)
+    {
+        // Services
+        services.AddScoped<IUserService, UserService>();
+        services.AddScoped<IGameService, GameService>();
+        return services;
+    }
+}
