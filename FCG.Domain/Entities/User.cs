@@ -17,7 +17,7 @@ namespace FCG.Domain.Entities
 
         private readonly List<UserGame> _library = new();
         public IReadOnlyCollection<UserGame> Library => _library.AsReadOnly();
-        protected User() { }
+        public User() { }
         public User(string name, string email, string passwordHash)
         {
             Id = Guid.NewGuid();
@@ -37,10 +37,11 @@ namespace FCG.Domain.Entities
         {
             if (string.IsNullOrWhiteSpace(email)) throw new ArgumentException("Email cannot be empty.");
 
-            if (!System.Text.RegularExpressions.Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            Email = email.Trim().ToLowerInvariant();
+
+            if (!System.Text.RegularExpressions.Regex.IsMatch(Email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
                 throw new ArgumentException("Invalid email format.");
 
-            Email = email.Trim().ToLowerInvariant();
             Touch();
         }
         public void UpdatePassword(string passwordHash)

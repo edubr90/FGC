@@ -14,7 +14,7 @@ namespace FCG.Domain.Entities
         public DateTime? UpdatedAt { get; private set; }
         public bool IsActive { get; private set; }
 
-        protected Game() { }
+        public Game() { }
 
         public Game(string title, string description, decimal price, GameGenre genre, string developer, DateTime releaseDate)
         {
