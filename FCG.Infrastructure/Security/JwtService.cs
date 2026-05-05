@@ -1,12 +1,6 @@
-// "// Copyright (c) FIAP Cloud Games. All rights reserved."
-
-using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 using FCG.Application.Interfaces;
 using FCG.Domain.Entities;
 using Microsoft.Extensions.Configuration;

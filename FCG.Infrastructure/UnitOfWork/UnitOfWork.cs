@@ -1,6 +1,5 @@
 using FCG.Domain.Interfaces;
 using FCG.Infrastructure.Persistence;
-using Microsoft.EntityFrameworkCore;
 
 namespace FCG.Infrastructure.UnitOfWork
 {

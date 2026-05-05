@@ -1,17 +1,7 @@
-using System;
-using System.Text;
-using System.Xml.Linq;
 using FCG.Api.Middleware;
-using FCG.Application.Services;
-using FCG.Domain.Interfaces;
 using FCG.Infrastructure.Persistence;
-using FCG.Infrastructure.Repositories;
-using FCG.Infrastructure.UnitOfWork;
 using FGC.IoC;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

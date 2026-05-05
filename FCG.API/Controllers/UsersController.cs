@@ -1,9 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using FCG.Domain.Interfaces;
 using FCG.Application.DTOs;
-using FCG.Application.Services;
-using FCG.Domain.Entities;
 using FCG.Domain.Enums;
 using FCG.Application.Interfaces;
 

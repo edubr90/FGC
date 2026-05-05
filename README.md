@@ -2,9 +2,7 @@
 
 ## Sumário
 
-================================================================================
-1. INSTRUÇÕES PARA EXECUTAR O PROJETO
-================================================================================
+## 1. INSTRUÇÕES PARA EXECUTAR O PROJETO
 
 Pré-requisitos:
   - .NET 8 SDK ou superior
@@ -31,9 +29,7 @@ Passos de Instalação:
    - URL: https://localhost:5001
    - Swagger: https://localhost:5001/swagger/index.html
 
-================================================================================
-2. ENDPOINTS PRINCIPAIS
-================================================================================
+## 2. ENDPOINTS PRINCIPAIS
 
 Autenticação:
   POST   /api/auth/register    - Registrar novo usuário
@@ -51,9 +47,7 @@ Jogos:
   PUT    /api/games/{id}       - Atualizar jogo
   DELETE /api/games/{id}       - Deletar jogo
 
-================================================================================
-3. ESTRUTURA DE CAMADAS
-================================================================================
+## 3. ESTRUTURA DE CAMADAS
 
 FCG.Domain (Camada de Domínio):
   - Entidades: User, Game
@@ -85,9 +79,7 @@ FCG.API (Camada de Apresentação):
   - appsettings.json: Configurações de produção
   - appsettings.Development.json: Configurações de desenvolvimento
 
-================================================================================
-4. CONFORMIDADE COM REQUISITOS
-================================================================================
+## 4. CONFORMIDADE COM REQUISITOS
 
 [Marcar com X os requisitos atendidos]
 

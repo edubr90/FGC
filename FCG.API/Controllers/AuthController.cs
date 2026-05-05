@@ -1,5 +1,3 @@
-// "// Copyright (c) FIAP Cloud Games. All rights reserved."
-
 using FCG.Api.Controllers;
 using FCG.Application.DTOs;
 using FCG.Application.Interfaces;
