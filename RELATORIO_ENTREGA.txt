@@ -1,0 +1,134 @@
+================================================================================
+                    RELATÓRIO DE ENTREGA DO PROJETO
+================================================================================
+
+Data de Entrega: 05 de maio de 2026
+Projeto: FCG - FIAP Cloud Games API
+
+================================================================================
+1. NOME DO GRUPO
+================================================================================
+
+Grupo 131
+
+================================================================================
+2. PARTICIPANTES E USERNAMES NO DISCORD
+================================================================================
+
+[PREENCHER COM INFORMAÇÕES DO GRUPO]
+
+Participante 1:
+  Nome: João Eduardo Correa
+  Username Discord: @edubr90
+  Matrícula/RA: 372391
+  Responsabilidades: Líder do projeto, desenvolvimento da API, configuração de JWT, documentação técnica
+
+================================================================================
+3. LINK DA DOCUMENTAÇÃO
+================================================================================
+
+GitHub (README.md + Documentação):
+https://github.com/edubr90/FGC
+
+Documentação DDD e Event Storming (Miro):
+https://miro.com/welcomeonboard/S1JuQUFUWmtsYUkzK2hLRm9OZWc5d3BzWDNmT1lKbk93dG94WHpka3hsTWV5SlI3NWpiWXpicUlPTUk0N0hKU0VGL25OZjI0UnJOSGJ0UjlLNHYzRE1GaTFWVFZUYzl3dlhzakdCZkdJcFQ0Q1NFL3dvaDRnaVFYNmxaZEM1MFBhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=9765213937
+
+Documentação Swagger/OpenAPI:
+https://localhost:5001/swagger/index.html
+(Disponível localmente após executar a aplicação)
+
+Documentação Técnica (CONTRIBUTING.md):
+https://github.com/edubr90/FGC/blob/master/CONTRIBUTING.md
+
+================================================================================
+4. LINK DO(S) REPOSITÓRIO(S)
+================================================================================
+
+Repositório Principal:
+https://github.com/edubr90/FGC
+
+Branch Principal: master
+
+Estrutura do Repositório:
+├── FCG.Domain/              - Entidades e interfaces de negócio
+├── FCG.Application/         - Serviços, DTOs e casos de uso
+├── FCG.Infrastructure/      - Acesso a dados e segurança
+├── FGC.IoC/                 - Configuração de injeção de dependência
+└── FCG.API/                 - Controllers e configuração da API
+
+================================================================================
+5. LINK DO VÍDEO
+================================================================================
+
+[PREENCHER COM INFORMAÇÕES DO VÍDEO]
+
+Plataforma: YouTube / [Outra Plataforma]
+URL do Vídeo: ___________________________
+Duração: _____ minutos
+Data de Upload: _____/_____/______
+
+Resumo do Conteúdo do Vídeo:
+  - Demonstração da arquitetura do projeto
+  - Fluxo de autenticação com JWT
+  - CRUD de usuários e jogos
+  - Executando a API localmente
+  - Testando endpoints com Swagger/Postman
+  - [Adicionar outros tópicos conforme necessário]
+
+================================================================================
+6. RESUMO DO PROJETO
+================================================================================
+
+Tipo: API RESTful
+Linguagem: C# (.NET 8)
+Framework: ASP.NET Core 8
+Banco de Dados: SQL Server (LocalDB)
+Padrão de Arquitetura: Camadas (Domain, Application, Infrastructure, API)
+
+Objetivo Geral:
+Desenvolver uma API robusta e segura para gerenciar um sistema de autenticação
+de usuários e um catálogo de jogos, demonstrando a aplicação de padrões SOLID,
+clean code e boas práticas de desenvolvimento em .NET.
+
+Funcionalidades Principais:
+  ✓ Autenticação e autorização com JWT
+  ✓ Gerenciamento de usuários (Create, Read, Update, Delete)
+  ✓ Gerenciamento de jogos (Create, Read, Update, Delete)
+  ✓ Sistema de roles (Admin, Player)
+  ✓ Validação robusta de entrada
+  ✓ Tratamento de erros centralizado
+  ✓ Injeção de dependência
+
+Tecnologias Utilizadas:
+  - .NET 8 SDK
+  - ASP.NET Core 8
+  - Entity Framework Core 8
+  - SQL Server LocalDB
+  - JWT (JSON Web Tokens)
+  - Swagger/OpenAPI
+
+================================================================================
+7. CONTATO E SUPORTE
+================================================================================
+
+Email de Contato: joao.eduardu@gmail.com
+Discord: @edubr90
+Repositório: https://github.com/edubr90/FGC
+
+Para dúvidas ou sugestões, entre em contato através dos canais acima.
+
+================================================================================
+12. ASSINATURAS
+================================================================================
+
+[Líder do Grupo]
+Nome: João Eduardo Correa
+Data: 05/05/2026
+Assinatura: João Eduardo Correa
+
+================================================================================
+                          FIM DO RELATÓRIO
+================================================================================
+
+Data de Preenchimento: 05 de maio de 2026
+Versão: 1.0

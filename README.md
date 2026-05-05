@@ -1,8 +1,138 @@
 # FCG - FIAP Cloud Games API
 
+## Sumário
+
+================================================================================
+1. INSTRUÇÕES PARA EXECUTAR O PROJETO
+================================================================================
+
+Pré-requisitos:
+  - .NET 8 SDK ou superior
+  - Visual Studio 2022 (recomendado) ou VS Code
+  - SQL Server LocalDB instalado
+  - Git
+
+Passos de Instalação:
+
+1. Clone o repositório:
+   $ git clone https://github.com/edubr90/FGC.git
+   $ cd FGC
+
+2. Restaure as dependências:
+   $ dotnet restore
+
+3. Configure o banco de dados:
+   $ dotnet ef database update --project FCG.Infrastructure
+
+4. Execute a API:
+   $ dotnet run --project FCG.API
+
+5. Acesse a API:
+   - URL: https://localhost:5001
+   - Swagger: https://localhost:5001/swagger/index.html
+
+================================================================================
+2. ENDPOINTS PRINCIPAIS
+================================================================================
+
+Autenticação:
+  POST   /api/auth/register    - Registrar novo usuário
+  POST   /api/auth/login       - Login (retorna JWT)
+
+Usuários:
+  GET    /api/users            - Listar usuários (Admin only)
+  GET    /api/users/{id}       - Obter usuário por ID
+  DELETE /api/users/{id}       - Deletar usuário
+
+Jogos:
+  GET    /api/games            - Listar todos os jogos
+  GET    /api/games/{id}       - Obter jogo por ID
+  POST   /api/games            - Criar novo jogo
+  PUT    /api/games/{id}       - Atualizar jogo
+  DELETE /api/games/{id}       - Deletar jogo
+
+================================================================================
+3. ESTRUTURA DE CAMADAS
+================================================================================
+
+FCG.Domain (Camada de Domínio):
+  - Entidades: User, Game
+  - Enums: UserRole, GameGenre, Platform
+  - Interfaces: IUserRepository, IGameRepository
+  - Padrões: Entidades com lógica de negócio
+
+FCG.Application (Camada de Aplicação):
+  - Serviços: UserService, GameService, JwtService
+  - DTOs: UserRequest, UserResponse, GameRequest, GameResponse
+  - Interfaces: IUserService, IGameService, IJwtService
+  - Casos de Uso: Autenticação, CRUD de usuários e jogos
+
+FCG.Infrastructure (Camada de Infraestrutura):
+  - Contexto EF: FcgDbContext
+  - Repositórios: UserRepository, GameRepository
+  - Segurança: JwtService
+  - Migrations: Histórico de mudanças no BD
+
+FGC.IoC (Configuração de Dependências):
+  - DependencyInjection.cs: Registro central de serviços
+  - ApplicationModule: Registro de serviços da aplicação
+  - AuthenticationModule: Configuração de autenticação JWT
+  - InfrastructureModule: Registro de repositórios e contexto
+
+FCG.API (Camada de Apresentação):
+  - Controllers: AuthController, UsersController, GamesController
+  - Program.cs: Configuração e inicialização da aplicação
+  - appsettings.json: Configurações de produção
+  - appsettings.Development.json: Configurações de desenvolvimento
+
+================================================================================
+4. CONFORMIDADE COM REQUISITOS
+================================================================================
+
+[Marcar com X os requisitos atendidos]
+
+Autenticação e Autorização:
+  [✓] JWT implementado
+  [✓] Roles (Admin/Player) implementados
+  [✓] Endpoints protegidos com [Authorize]
+  [✓] Hash de senha seguro
+
+Arquitetura:
+  [✓] Separação em camadas (Domain, Application, Infrastructure, API)
+  [✓] Padrão SOLID aplicado
+  [✓] Clean Code
+  [✓] Injeção de dependência centralizada
+  [✓] Repositórios com interfaces
+
+Funcionalidades:
+  [✓] CRUD completo para usuários
+  [✓] CRUD completo para jogos
+  [✓] Validação robusta
+  [✓] Tratamento de erros
+  [✓] Respostas padronizadas
+
+Boas Práticas:
+  [✓] .editorconfig configurado
+  [✓] Nomenclatura consistente
+  [✓] Comentários e documentação
+  [✓] File-scoped namespaces
+  [✓] Async/await em operações I/O
+
+Documentação:
+  [✓] README.md completo
+  [✓] CONTRIBUTING.md com padrões
+  [✓] Swagger/OpenAPI configurado
+  [✓] Comentários XML nos controllers
+
 ## 📋 Objetivos
 
 A **FCG.API** é uma API RESTful moderna desenvolvida em **.NET 8** que gerencia um sistema de autenticação seguro e um catálogo de jogos. O projeto foi desenvolvido com foco em boas práticas de arquitetura, segurança e escalabilidade.
+
+## Demonstração dos Event-Stormings e Documentação DDD
+
+O Board do Miro poderá ser acessado através do link abaixo:
+
+https://miro.com/welcomeonboard/S1JuQUFUWmtsYUkzK2hLRm9OZWc5d3BzWDNmT1lKbk93dG94WHpka3hsTWV5SlI3NWpiWXpicUlPTUk0N0hKU0VGL25OZjI0UnJOSGJ0UjlLNHYzRE1GaTFWVFZUYzl3dlhzakdCZkdJcFMrSUc2dUx1UFFTa3M5YVd2K2pRT0d0R2lncW1vRmFBVnlLcVJzTmdFdlNRPT0hdjE=?share_link_id=303491922041
 
 ### Objetivos Principais
 
