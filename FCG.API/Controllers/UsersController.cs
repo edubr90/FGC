@@ -89,7 +89,7 @@ namespace FCG.Api.Controllers
         }
 
         [HttpPatch("{id:guid}/promote")]
-        [Authorize(Roles = nameof(UserRole.Admin))]
+        [Authorize(Roles = nameof(UserRole.User))]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> PromoteToAdmin(Guid id, CancellationToken cancellationToken)
