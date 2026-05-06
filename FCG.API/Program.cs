@@ -1,4 +1,5 @@
 using FCG.Api.Middleware;
+using FCG.Domain.Entities;
 using FCG.Infrastructure.Persistence;
 using FGC.IoC;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,17 @@ using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<FcgDbContext>();
     db.Database.Migrate();
+
+    if (!db.Users.Any(_ => _.Role == FCG.Domain.Enums.UserRole.Admin))
+    {
+        var adminHash = BCrypt.Net.BCrypt.HashPassword("Admin@1234");
+        var adminUser = new User("Administrator", "admin@fcg.com", adminHash);
+        adminUser.PromoteToAdmin();
+        adminUser.Activate();
+
+        db.Users.Add(adminUser);
+        db.SaveChanges();
+    }
 }
 
 app.Run();

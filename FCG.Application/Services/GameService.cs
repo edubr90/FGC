@@ -28,10 +28,10 @@ public class GameService : IGameService
         if (!game.IsActive)
             throw new InvalidOperationException("Game is not available for acquisition.");
 
-        user.AddGame(game);
-        await _userRepository.UpdateAsync(user, cancellationToken);
-        await _uow.CommitAsync(cancellationToken);
-    }
+            user.AddGame(game);
+            await _userRepository.UpdateAsync(user, cancellationToken);
+            await _uow.CommitAsync(cancellationToken);
+        }
 
     public async Task<GameResponse> CreateAsync(CreateGameRequest request, CancellationToken cancellationToken = default)
     {

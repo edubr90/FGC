@@ -6,8 +6,8 @@ namespace FCG.Domain.Entities
         public Guid GameId { get; private set; }
         public DateTime AcquiredAt { get; private set; }
 
-        public User? User { get; private set; } = new User();
-        public Game? Game { get; private set; } = new Game();
+        public User? User { get; private set; }
+        public Game? Game { get; private set; }
         protected UserGame() { }
         public UserGame(Guid userId, Guid gameId)
         {

@@ -29,7 +29,10 @@ namespace FCG.Infrastructure.Repositories
 
         public async Task<User?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
         {
-            return await _db.Users.Include(u => u.Library).FirstOrDefaultAsync(u => u.Id == id, cancellationToken);
+            return await _db.Users
+                .Include(u => u.Library)
+                .ThenInclude(ug => ug.Game)
+                .FirstOrDefaultAsync(u => u.Id == id, cancellationToken);
         }
 
         public async Task<User?> GetByUsernameAsync(string username, CancellationToken cancellationToken = default)
